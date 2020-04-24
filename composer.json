@@ -1,0 +1,12 @@
+{
+    "name": "fverbeek/php-project-to-test",
+    "require": {
+        "heroku/heroku-buildpack-php": "^173.0"
+    },
+    "authors": [
+        {
+            "name": "fverbeek",
+            "email": "f.verbeek@picturae.com"
+        }
+    ]
+}
