@@ -1,12 +1,15 @@
 {
-    "name": "fverbeek/php-project-to-test",
-    "require": {
-        "heroku/heroku-buildpack-php": "^173.0"
-    },
-    "authors": [
-        {
-            "name": "fverbeek",
-            "email": "f.verbeek@picturae.com"
-        }
-    ]
+  "name": "fverbeek/php-project-to-test",
+  "require": {
+    "php": "^7.3"
+  },
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "^173.0"
+  },
+  "authors": [
+    {
+      "name": "fverbeek",
+      "email": "f.verbeek@picturae.com"
+    }
+  ]
 }
