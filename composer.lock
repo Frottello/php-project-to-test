@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "216fdaa71173d73880b9b1943091de59",
+    "content-hash": "b72d4395580581a0f2bc9ce3c0f027f7",
     "packages": [],
     "packages-dev": [
         {
@@ -50,11 +50,47 @@
                 "php"
             ],
             "time": "2020-03-20T18:09:19+00:00"
+        },
+        {
+            "name": "picturae/composer-ext-install",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://code.pictura-dp.nl/git/picturae-composer-ext-install.git",
+                "reference": "42deb700ec2b3a15671d7777bdf5402fbd1a0a40"
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.3"
+            },
+            "bin": [
+                "dist/composer-ext-install"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Picturae\\Composer\\": "src/"
+                }
+            },
+            "scripts": {
+                "build": [
+                    "scripts/build.sh"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Picturae B.V.",
+                    "email": "contact@picturae.com"
+                }
+            ],
+            "time": "2020-04-24T08:57:29+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "picturae/composer-ext-install": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -1,0 +1,29 @@
+version: "3.5"
+
+services:
+
+  nginx:
+    image: phpdockerio/nginx:latest
+    network_mode: bridge
+    environment:
+      VIRTUAL_HOST: test.localhost
+    volumes:
+      - .:/app:ro
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - php_fpm
+
+  php_fpm:
+    build:
+      context: .
+      dockerfile: docker/php-fpm/Dockerfile
+    network_mode: bridge
+    volumes:
+      - .:/app
+      - ./docker/php-fpm/php-fpm.conf:/etc/php/php-fpm.conf:ro
+      - ./docker/php-fpm/php-fpm.d:/etc/php/php-fpm.d:ro
+    environment:
+      DATABASE_URL: postgres://some1:secr3t@postgresql:5432/example_db
+      MEMCACHED_URL: memcached:11211
+      SMTP_URL: smtp://maildev:25
+

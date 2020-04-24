@@ -1,10 +1,17 @@
 {
   "name": "fverbeek/php-project-to-test",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packagist.picturae.pro"
+    }
+  ],
   "require": {
     "php": "^7.3"
   },
   "require-dev": {
-    "heroku/heroku-buildpack-php": "^173.0"
+    "heroku/heroku-buildpack-php": "^173.0",
+    "picturae/composer-ext-install": "dev-master"
   },
   "authors": [
     {
